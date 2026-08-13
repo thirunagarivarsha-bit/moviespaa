@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #09090b;
+  color: #f4f4f5;
+  line-height: 1.5;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #27272a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(9, 9, 11, .95);
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #a78bfa;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav span {
+  background: #a78bfa;
+  color: #09090b;
+  padding: 2px 7px;
+  border-radius: 20px;
+  margin-left: 4px;
+}
+
+.theme-btn {
+  border: 1px solid #3f3f46;
+  background: transparent;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 650px;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      #312e81 0,
+      transparent 35%
+    ),
+    #09090b;
+}
+
+.hero-content {
+  width: 50%;
+}
+
+.eyebrow {
+  color: #a78bfa;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 7vw, 90px);
+  line-height: .95;
+  letter-spacing: -5px;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  color: #a1a1aa;
+  max-width: 500px;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #a78bfa;
+  color: #09090b;
+}
+
+.secondary-btn {
+  border: 1px solid #3f3f46;
+  color: white;
+}
+
+.hero-movie {
+  width: 400px;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+}
+
+.hero-movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 35%,
+    rgba(0,0,0,.9)
+  );
+}
+
+.hero-movie-info {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.hero-movie-info span {
+  color: #a78bfa;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.hero-movie-info h2 {
+  font-size: 30px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 90px 7%;
+  border-top: 1px solid #18181b;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+}
+
+.section-number {
+  color: #52525b;
+  font-size: 35px;
+}
+
+
+/* ================= MOVIE GRID ================= */
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+/* ================= MOVIE CARD ================= */
+
+.movie-card {
+  background: #111113;
+  border: 1px solid #27272a;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  border-color: #52525b;
+}
+
+.poster-wrapper {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,.8);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.movie-info {
+  padding: 18px;
+}
+
+.movie-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.movie-info p {
+  color: #71717a;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.watch-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3f3f46;
+  background: transparent;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.watch-btn:hover {
+  background: #a78bfa;
+  color: #09090b;
+}
+
+
+/* ================= CONTROLS ================= */
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 13px 15px;
+  background: #18181b;
+  color: white;
+  border: 1px solid #3f3f46;
+  border-radius: 8px;
+  outline: none;
+}
+
+.controls input {
+  flex: 1;
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 9px 17px;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  color: #a1a1aa;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.chip.active,
+.chip:hover {
+  background: #a78bfa;
+  color: #09090b;
+}
+
+
+/* ================= WATCHLIST ================= */
+
+.empty {
+  text-align: center;
+  padding: 70px 20px;
+  color: #71717a;
+}
+
+.empty-icon {
+  font-size: 55px;
+  color: #52525b;
+  margin-bottom: 15px;
+}
+
+.empty h3 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 60px 7%;
+  border-top: 1px solid #27272a;
+  text-align: center;
+}
+
+footer p {
+  color: #71717a;
+  margin: 12px 0;
+}
+
+footer small {
+  color: #52525b;
+}
+
+
+/* ================= LIGHT MODE ================= */
+
+body.light {
+  background: #fafafa;
+  color: #18181b;
+}
+
+body.light .navbar {
+  background: rgba(250,250,250,.95);
+  border-color: #e4e4e7;
+}
+
+body.light .logo {
+  color: #18181b;
+}
+
+body.light nav a {
+  color: #52525b;
+}
+
+body.light .movie-card,
+body.light .controls input,
+body.light .controls select,
+body.light .chip {
+  background: white;
+  color: #18181b;
+  border-color: #e4e4e7;
+}
+
+body.light .movie-info h3,
+body.light .empty h3 {
+  color: #18181b;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-movie {
+    width: 350px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero,
+  .section {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-movie {
+    width: 100%;
+    height: 450px;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+}
